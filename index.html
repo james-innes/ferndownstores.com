@@ -2,112 +2,188 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ferndown Stores Ltd</title>
   <style>
+    html {
+      box-sizing: border-box;
+      background-color: floralwhite;
+    }
+
     body {
-      font-family: Georgia, serif;
+      font-family: Garamond, serif;
       font-size: 16px;
       margin: 1rem auto;
       width: calc(100% - 3rem);
-      max-width: 25rem;
+      max-width: 40rem;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h3 {
+      margin: 1.5rem 0 0.5rem 0;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    #globe {
+      width: 100%;
+      max-height: 6rem;
+      object-fit: cover;
     }
 
     #logo {
-      font-size: 1.6em;
-      margin-bottom: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
     }
 
-    #header {
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 600px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    section img {
       width: 100%;
+      max-width: 15rem;
     }
 
-    #logo+p {
-      margin-top: 0;
-      font-size: 20px;
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: small;
     }
 
-    img {
-      height: auto;
-      width: 80%;
+    hr {
+      border: none;
+      border-top: 1px solid black;
+      margin: 1rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #000;
+      margin: 1rem 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #000;
+      padding: 3px;
     }
   </style>
 </head>
 
 <body>
-  <img id="header" src="./header.jpg">
+  <header>
+    <img src="./globe.jpg" id="globe">
+    <h1 id="logo">Ferndown Stores</h1>
+  </header>
+  <main>
+    <div>
+      <p style="margin-top: 1rem;"><b>Welcome</b> to Ferndown Stores Ltd, a network of online marketplace stores selling
+        apparel with custom
+        printed
+        designs manufactured responsibly in the USA and EU.</p>
 
-  <h1 id="logo">Ferndown Stores Ltd</h1>
-  <p>A company that sells T-shirts online</p>
+      <table style="text-align: center;">
+        <tr>
+          <th colspan="3">Average monthly stats</th>
+        </tr>
+        <tr>
+          <td>Revenue</td>
+          <td>Orders</td>
+          <td>Views</td>
+        </tr>
+        <tr>
+          <td>£13k</td>
+          <td>450</td>
+          <td>60k</td>
+        </tr>
+      </table>
+
+      <p>
+        Companies House number: 15449541<br>
+        VAT Number: Not registered<br>
+        SIC Code: 47910
+      </p>
+
+      <h3>Policies</h3>
+      <p>Please refer to the website where you bought from us e.g eBay or Etsy for the respective policies
+        that apply.</p>
+      <ul>
+        <li><a href="./privacy.txt" target="_blank">Customer privacy</a></li>
+        <li><a href="./refunds.txt" target="_blank">Refund and return</a></li>
+        <li><a href="./terms.txt" target="_blank">Terms of service</a></li>
+      </ul>
+    </div>
+    <div>
+      <section>
+        <h3>Contact</h3>
+        <p><a href="mailto:contact@ferndownstores.com">contact@ferndownstores.com</a></p>
+        <p><a href="tel:+447466364432">+44 07466364432</a><br><small>Please leave a message or email to arrange a
+            call.</small></p>
+
+        <p>Customer service:<br><a href="mailto:support@ferndownstores.com">support@ferndownstores.com</a></p>
+        <p>Data protection officer:<br><a href="mailto:privacy@ferndownstores.com">privacy@ferndownstores.com</a></p>
+      </section>
+
+
+      <section style="display: flex; gap: 1rem; overflow: hidden; margin-top: 2rem;">
+        <div>
+          <h3 style="margin-top: 0;">Address</h3>
+          <span style="white-space: nowrap;">
+            Ferndown Stores Ltd<br>
+            124 City Road<br>
+            London<br>
+            EC1V2NX<br>
+            United Kingdom
+            </p>
+        </div>
+        <img src="./office.jpg" style="max-width: 10rem">
+      </section>
+
+
+      <section>
+        <h3>Payment</h3>
+        <p>
+          Monzo Bank<br>
+          FERNDOWN STORES LTD<br>
+          04-00-03<br>
+          59273729<br>
+        </p>
+      </section>
+    </div>
+  </main>
+
   <hr>
-
-  <h3>Business activity</h3>
-
-  <p>SIC Code 47910 - E-commerce and Online Retail.</p>
-  <p>We sell to retail customers through major online marketplaces such as Etsy, eBay, Shopify etc.</p>
-  <img src="./etsy.png" alt="Screenshot of Etsy Seller dashboard">
-  <small style="display: inline-block"><a href="./etsy.png" target="_blank">View image in new tab</a></small>
-  <p>Our clothes are manufactured and printed in the US or EU.</p>
-
-  <hr>
-  <h3>Registration</h3>
-
-  <p>A limited liability company registered in the UK at Companies House with number 15449541.</p>
-  <p>We are not currently VAT registered in the UK.</p>
-  <p>We are not required by law to have any licences to operate. </p>
-
-  <hr>
-  <h3>Address</h3>
-
-  <p>Registered office and trading address:</p>
-  <p>
-    Ferndown Stores Ltd<br>
-    124 City Road<br>
-    Islington<br>
-    London<br>
-    EC1V 2NX<br>
-    United Kingdom
-  </p>
-  <img src="./office.jpg" alt="Office in London">
-
-  <hr>
-  <h3> Contact</h3>
-
-  <p>Customer service:<br>support&#64;ferndownstores.com</p>
-  <p>General enquires:<br>contact&#64;ferndownstores.com</p>
-  <p>Data protection officer:<br>privacy&#64;ferndownstores.com</p>
-
-  <p>+44 07466364432</p>
-  <p>Please leave a message or email to arrange a call.</p>
-
-  <hr>
-  <h3>Payment</h3>
-
-  <p>
-    Monzo Bank<br>
-    FERNDOWN STORES LTD<br>
-    04-00-03<br>
-    59273729<br>
-  </p>
-
-  <hr>
-  <h3>Policies</h3>
-
-  <p>Please refer to the platform or website where you bought from us e.g eBay or Etsy for the respective policies that
-    apply.</p>
-
-  <ul>
-    <li><a href="./privacy.txt" target="_blank">Customer privacy</a></li>
-    <li><a href="./refunds.txt" target="_blank">Refund and return</a></li>
-    <li><a href="./terms.txt" target="_blank">Terms of service</a></li>
-  </ul>
-
-  <p>We comply with UK and EU GDPR.</p>
-
-  <hr>
-  <p>Copyright &copy; 2024 Ferndown Stores Ltd</p>
+  <footer>
+    <span>Copyright &copy; 2024 Ferndown Stores Ltd</span>
+    <img src="./w3c.png" alt="W3C" style="height: 20px; float: right;">
+  </footer>
+</body>
 </body>
 
 </html>
